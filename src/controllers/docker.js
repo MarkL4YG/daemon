@@ -549,7 +549,7 @@ class Docker {
                             },
                         ],
                         Tmpfs: {
-                            '/tmp': Config.get('docker.policy.container.tmpfs', 'rw,exec,nosuid,size=50M'),
+                            '/tmp': Config.get('docker.policy.container.tmpfs', 'rw,exec,nosuid,size=200M'),
                         },
                         PortBindings: bindings,
                         Memory: Math.round(this.hardlimit(config.memory) * 1000000),
